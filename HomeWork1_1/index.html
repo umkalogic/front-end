@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <title>Funny table</title>
+</head>
+<body>
+
+<div class="table-wrapper">
+    <input id="d-all" class="hidden" type="radio" name="work-days" value="work-days-all" checked="checked">
+    <input id="day" class="hidden" type="radio" name="work-days" value="work-days-weekdays">
+    <input id="end" class="hidden" type="radio" name="work-days" value="work-days-weekends">
+    <input id="h-all" class="hidden" type="radio" name="hours" value="hours-all" checked="checked">
+    <input id="am" class="hidden" type="radio" name="hours" value="hours-am">
+    <input id="pm" class="hidden" type="radio" name="hours" value="hours-pm">
+    <input id="c-all" class="hidden" type="radio" name="category" value="category-all" checked="checked">
+    <input id="c-1" class="hidden" type="radio" name="category" value="category-first">
+    <input id="c-2" class="hidden" type="radio" name="category" value="category-second">
+
+    <div class="manage-table">
+        <div class="title"><h2>Manage Doctors Info</h2></div>
+        <div class="days">
+            <label class="days-title">Days: </label>
+            <label class="days-all btn btn-large btn-success" for="d-all">All </label>
+            <label class="weekdays btn btn-large btn-success" for="day">Weekdays </label>
+            <label class="weekends btn btn-large btn-success" for="end">Weekends </label>
+        </div>
+        <div class="hours">
+            <label class="hours-title">Hours: </label>
+            <label class="hours-all btn btn-large btn-success" for="h-all">All </label>
+            <label class="am btn btn-large btn-success" for="am">A.M. </label>
+            <label class="pm btn btn-large btn-success" for="pm">P.M. </label>
+        </div>
+        <div class="category">
+            <label class="category-title">Category: </label>
+            <label class="category-all btn btn-large btn-success" for="c-all">All </label>
+            <label class="first btn btn-large btn-success" for="c-1">1 </label>
+            <label class="second btn btn-large btn-success" for="c-2">2 </label>
+        </div>
+    </div>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Full name</th>
+                <th>Specialty</th>
+                <th>Category</th>
+                <th>Cabinet</th>
+                <th>Working Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="work-days-weekdays hours-am category-first ">
+                <td>1.</td>
+                <td>Lorem Ipsum</td>
+                <td>Therapist</td>
+                <td>1</td>
+                <td>123</td>
+                <td>Mon, Tue, Fri 8am - 12pm</td>
+            </tr>
+            <tr class="work-days-weekdays hours-pm category-first ">
+                <td>2.</td>
+                <td>John Doe</td>
+                <td>Therapist</td>
+                <td>1</td>
+                <td>123</td>
+                <td>Mon, Tue, Fri 12pm - 4pm</td>
+            </tr>
+            <tr class="work-days-weekdays hours-am category-second">
+                <td>3.</td>
+                <td>Sunny Hill</td>
+                <td>Therapist</td>
+                <td>2</td>
+                <td>223</td>
+                <td>Wed, Thu, Fri 8am - 12pm</td>
+            </tr>
+            <tr class="work-days-weekdays hours-pm category-second">
+                <td>4.</td>
+                <td>Messy Crazy</td>
+                <td>Therapist</td>
+                <td>2</td>
+                <td>223</td>
+                <td>Wed, Thu, Fri 12pm - 4pm</td>
+            </tr>
+            <tr class="work-days-weekdays hours-am category-second">
+                <td>5.</td>
+                <td>Leonardo Di Carpio</td>
+                <td>Neurologist</td>
+                <td>2</td>
+                <td>103</td>
+                <td>Mon - Fri 10am - 12pm</td>
+            </tr>
+            <tr class="work-days-weekdays hours-am category-first">
+                <td>6.</td>
+                <td>Johnathan Lorenz</td>
+                <td>Obstetrician</td>
+                <td >1</td>
+                <td>405</td>
+                <td>Mon - Fri 10am - 12pm</td>
+            </tr>
+            <tr class="work-days-weekends hours-am category-second">
+                <td>7.</td>
+                <td>Archibald De La Cruz</td>
+                <td>Obstetrician</td>
+                <td>2</td>
+                <td>405</td>
+                <td>Sat 10am - 12pm</td>
+            </tr>
+            <tr class="work-days-weekdays work-days-weekends hours-am category-first">
+                <td>8.</td>
+                <td>Morena Brightly</td>
+                <td>Neurologist</td>
+                <td>1</td>
+                <td>103</td>
+                <td>Tue, Sat 10am - 12pm</td>
+            </tr>
+            <tr class="category-first work-days-weekdays hours-am">
+                <td>9.</td>
+                <td>Geek Journal</td>
+                <td>Ophthalmologist</td>
+                <td>1</td>
+                <td>203</td>
+                <td>Mon - Fri 9am - 11am</td>
+            </tr>
+            <tr class="category-second work-days-weekdays hours-pm">
+                <td>10.</td>
+                <td>Fluffy Pinkleton</td>
+                <td>Ophthalmologist</td>
+                <td>2</td>
+                <td>202</td>
+                <td>Mon - Fri 12pm - 2pm</td>
+            </tr>
+            <tr class="category-first work-days-weekdays work-days-weekends hours-am">
+                <td>11.</td>
+                <td>Agent Seven</td>
+                <td>Otolaryngologist</td>
+                <td>1</td>
+                <td>200</td>
+                <td>Mon, Wed, Sat 9am - 11am</td>
+            </tr>
+            <tr class="category-second work-days-weekdays hours-am">
+                <td>12.</td>
+                <td>Barry Glasgow</td>
+                <td>Otolaryngologist</td>
+                <td>2</td>
+                <td>201</td>
+                <td>Tue, Thu, Fri 2pm - 4pm</td>
+            </tr>
+            <tr class="category-first work-days-weekdays hours-am hours-pm">
+                <td>13.</td>
+                <td>Becoming Frustrated</td>
+                <td>Pediatrician</td>
+                <td>1</td>
+                <td>101</td>
+                <td>Mon, Wed, Fri 10am - 12pm<br>
+                    Tue, Thu 12pm - 4pm</td>
+            </tr>
+            <tr class="category-first work-days-weekdays hours-am hours-pm">
+                <td>14.</td>
+                <td>Nadia Economist</td>
+                <td>Pulmonologist</td>
+                <td>1</td>
+                <td>102</td>
+                <td>Mon, Wed, Fri 10am - 12pm<br>
+                    Tue, Thu 12pm - 4pm</td>
+            </tr>
+            <tr class="category-first work-days-weekdays hours-am hours-pm">
+                <td>15.</td>
+                <td>Bee Jeez</td>
+                <td>Urologist</td>
+                <td>1</td>
+                <td>301</td>
+                <td>Mon, Wed, Fri 10am - 12pm<br>
+                    Tue, Thu 12pm - 4pm</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="form-wrapper">
+    <input class="valid phone" type="text" pattern="^[+][3][8][0]\d{9}" placeholder="Type your phone here" required>
+    <input class="valid email" type="text" pattern="[a-zA-Z]{1}[_a-zA-Z]*@[a-zA-Z]+.[a-zA-Z]{2,4}" placeholder="Type your email here" required>
+    <input class="btn btn-success btn-large hidden" type="button" value="Send Data">
+</div>
+</body>
+</html>
