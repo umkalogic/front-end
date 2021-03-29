@@ -665,7 +665,13 @@ label[for]:hover .tooltiptext {
         align-items: center;
     }
     .media {
-       width: 100%;
+        -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+        filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+        mix-blend-mode: multiply;
+        width: 100%;
+    }
+    .figure .media[alt=kafka] {
+        display: block;
     }
 }
 
