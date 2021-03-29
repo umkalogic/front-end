@@ -33,33 +33,28 @@ video {
 .container {
     margin: 0 auto;
  }
+/* mobile first */
 .grid-container {
     display: grid;
-    grid-template-columns: 0.5em 1fr 1fr 1fr 1fr 1fr 0.5em;
+    grid-template-columns: 0.5em 1fr 0.5em;
     grid-template-rows: auto auto auto;
     gap: 0.8em 0.8em;
     grid-template-areas:
-    "header header header header header header header"
-    ". head-runner head-runner head-runner head-runner head-runner ."
-    ". articles articles articles articles articles .";
+    "header header header"
+    ". head-runner ."
+    ". articles .";
 }
 .header {
     display: grid;
-    grid-template-columns: 0.5em 1fr 1fr 1fr 1fr 1fr 0.5em;
+    grid-template-columns: 0.5em 1fr 0.5em;
     grid-template-rows: auto;
     gap: 0.8em 0.8em;
     grid-template-areas:
-    ". controls title title title . .";
+    "title title title";
     grid-area: header;
 }
 .controls {
-    grid-area: controls;
-    position: relative;
-    width: auto;
-    left: 10px;
-    border: 3px double #2f2f2f;
-    padding: 10px 15px 10px 15px;
-    margin-top: 4px;
+    display: none;
 }
 label[for]:hover {
     cursor: pointer;
@@ -75,11 +70,11 @@ label[for]:hover {
 }
 .head-runner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 0.8em 0.8em;
     grid-template-areas:
-    "title-runner title-runner title-runner title-runner title-runner";
+    "title-runner";
     grid-area: head-runner;
 }
 .title-runner {
@@ -92,11 +87,15 @@ label[for]:hover {
 }
 .articles {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
     gap: 1em 2em;
     grid-template-areas:
-    "column--1 column--2 column--3 column--4 column--5";
+    "column--1"
+    "column--2"
+    "column--3"
+    "column--4"
+    "column--5";
     grid-area: articles;
 }
 .column--1 {
@@ -372,7 +371,7 @@ label[for]:hover {
     -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
     filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
     mix-blend-mode: multiply;
-    width: 100%;
+    width: 50%;
 }
 .citation {
     font-family: 'Playfair Display', serif;
@@ -402,6 +401,7 @@ label[for]:hover {
     display: block;
     margin: 0 auto;
 }
+
 input#font-size-lg:checked ~ .grid-container [class^=article--] {
     font-size: 1.5em;
 }
@@ -427,6 +427,44 @@ input#style-inverse:checked ~ .grid-container .controls {
 input#style-inverse:checked ~ .grid-container .media {
     mix-blend-mode: lighten;
 }
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+label[for]:hover .tooltiptext {
+    visibility: visible;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -512,8 +550,123 @@ input#style-inverse:checked ~ .grid-container .media {
    These examples override the primary ('mobile first') styles.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 968px) {
+    /* two-columns */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 0.5em 1fr 1fr 1fr 1fr 0.5em;
+        grid-template-rows: auto auto auto;
+        gap: 0.8em 0.8em;
+        grid-template-areas:
+    "header header header header header header"
+    ". head-runner head-runner head-runner head-runner ."
+    ". articles articles articles articles.";
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 0.5em 1fr 1fr 1fr 1fr 0.5em;
+        grid-template-rows: auto;
+        gap: 0.8em 0.8em;
+        grid-template-areas:
+    ". controls title title title .";
+        grid-area: header;
+    }
+    .head-runner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0.8em 0.8em;
+        grid-template-areas:
+    "title-runner title-runner title-runner title-runner";
+        grid-area: head-runner;
+    }
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1em 2em;
+        grid-template-areas:
+    "column--1 column--1 column--2 column--2"
+    "column--3 column--3 column--4 column--4"
+    "column--5 column--5 column--5 column--5";
+        grid-area: articles;
+    }
+    .controls {
+        grid-area: controls;
+        position: relative;
+        width: auto;
+        left: 10px;
+        border: 3px double #2f2f2f;
+        padding: 10px 15px 10px 15px;
+        margin-top: 4px;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .media {
+       max-height: 400px;
+    }
+    .media[alt=kafka] {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1368px) {
+    /* 5 columns */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 0.5em 1fr 1fr 1fr 1fr 1fr 0.5em;
+        grid-template-rows: auto auto auto;
+        gap: 0.8em 0.8em;
+        grid-template-areas:
+    "header header header header header header header"
+    ". head-runner head-runner head-runner head-runner head-runner ."
+    ". articles articles articles articles articles .";
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 0.5em 1fr 1fr 1fr 1fr 1fr 0.5em;
+        grid-template-rows: auto;
+        gap: 0.8em 0.8em;
+        grid-template-areas:
+    ". controls title title title . .";
+        grid-area: header;
+    }
+    .head-runner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0.8em 0.8em;
+        grid-template-areas:
+    "title-runner title-runner title-runner title-runner title-runner";
+        grid-area: head-runner;
+    }
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1em 2em;
+        grid-template-areas:
+    "column--1 column--2 column--3 column--4 column--5";
+        grid-area: articles;
+    }
+    .controls {
+        grid-area: controls;
+        position: relative;
+        width: auto;
+        left: 10px;
+        border: 3px double #2f2f2f;
+        padding: 10px 15px 10px 15px;
+        margin-top: 4px;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .media {
+       width: 100%;
+    }
 }
 
 @media print,
