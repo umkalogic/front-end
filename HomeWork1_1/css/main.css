@@ -111,39 +111,39 @@ video {
     display: none;
 }
 
-input#d-all:checked ~ input#h-all:checked ~ input#c-all:checked ~ .content-table tbody tr,
+input#d-all:checked ~ input#h-all:checked ~ input#c-all:checked ~ .content-table tbody tr.category-all,
 input#d-all:checked ~ input#h-all:checked ~ input#c-1:checked ~ .content-table tbody tr.category-first,
 input#d-all:checked ~ input#h-all:checked ~ input#c-2:checked ~ .content-table tbody tr.category-second,
 
-input#d-all:checked ~ input#am:checked ~ input#c-all:checked ~ .content-table tbody tr.hours-am,
+input#d-all:checked ~ input#am:checked ~ input#c-all:checked ~ .content-table tbody tr.hours-am.category-all,
 input#d-all:checked ~ input#am:checked ~ input#c-1:checked ~ .content-table tbody tr.hours-am.category-first,
 input#d-all:checked ~ input#am:checked ~ input#c-2:checked ~ .content-table tbody tr.hours-am.category-second,
 
-input#d-all:checked ~ input#pm:checked ~ input#c-all:checked ~ .content-table tbody tr.hours-pm,
+input#d-all:checked ~ input#pm:checked ~ input#c-all:checked ~ .content-table tbody tr.hours-pm.category-all,
 input#d-all:checked ~ input#pm:checked ~ input#c-1:checked ~ .content-table tbody tr.hours-pm.category-first,
 input#d-all:checked ~ input#pm:checked ~ input#c-2:checked ~ .content-table tbody tr.hours-pm.category-second,
 
-input#day:checked ~ input#h-all:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekdays,
+input#day:checked ~ input#h-all:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekdays.category-all,
 input#day:checked ~ input#h-all:checked ~ input#c-1:checked ~ .content-table tbody tr.work-days-weekdays.category-first,
 input#day:checked ~ input#h-all:checked ~ input#c-2:checked ~ .content-table tbody tr.work-days-weekdays.category-second,
 
-input#day:checked ~ input#am:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekdays.hours-am,
+input#day:checked ~ input#am:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekdays.hours-am.category-all,
 input#day:checked ~ input#am:checked ~ input#c-1:checked ~ .content-table tbody tr.work-days-weekdays.hours-am.category-first,
 input#day:checked ~ input#am:checked ~ input#c-2:checked ~ .content-table tbody tr.work-days-weekdays.hours-am.category-second,
 
-input#day:checked ~ input#pm:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekdays.hours-pm,
+input#day:checked ~ input#pm:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekdays.hours-pm.category-all,
 input#day:checked ~ input#pm:checked ~ input#c-1:checked ~ .content-table tbody tr.work-days-weekdays.hours-pm.category-first,
 input#day:checked ~ input#pm:checked ~ input#c-2:checked ~ .content-table tbody tr.work-days-weekdays.hours-pm.category-second,
 
-input#end:checked ~ input#h-all:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekends,
+input#end:checked ~ input#h-all:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekends.category-all,
 input#end:checked ~ input#h-all:checked ~ input#c-1:checked ~ .content-table tbody tr.work-days-weekends.category-first,
 input#end:checked ~ input#h-all:checked ~ input#c-2:checked ~ .content-table tbody tr.work-days-weekends.category-second,
 
-input#end:checked ~ input#am:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekends.hours-am,
+input#end:checked ~ input#am:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekends.hours-am.category-all,
 input#end:checked ~ input#am:checked ~ input#c-1:checked ~ .content-table tbody tr.work-days-weekends.hours-am.category-first,
 input#end:checked ~ input#am:checked ~ input#c-2:checked ~ .content-table tbody tr.work-days-weekends.hours-am.category-second,
 
-input#end:checked ~ input#pm:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekends.hours-pm,
+input#end:checked ~ input#pm:checked ~ input#c-all:checked ~ .content-table tbody tr.work-days-weekends.hours-pm.category-all,
 input#end:checked ~ input#pm:checked ~ input#c-1:checked ~ .content-table tbody tr.work-days-weekends.hours-pm.category-first,
 input#end:checked ~ input#pm:checked ~ input#c-2:checked ~ .content-table tbody tr.work-days-weekends.hours-pm.category-second {
     display: table-row;
@@ -252,11 +252,11 @@ input.phone:valid + input.email:valid ~ input.btn-success {
     grid-template-rows: 1fr;
     gap: 0 12px;
     grid-template-areas:
-    "category-title category-all first second";
+    "category-title first second category-all";
     grid-area: category;
 }
-.second { grid-area: second; }
 .first { grid-area: first; }
+.second { grid-area: second; }
 .category-all { grid-area: category-all; }
 .category-title { grid-area: category-title; }
 .days-all, .weekdays, .weekends,

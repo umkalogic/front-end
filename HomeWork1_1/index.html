@@ -21,9 +21,9 @@
     <input id="h-all" class="hidden" type="radio" name="hours" value="hours-all" checked="checked">
     <input id="am" class="hidden" type="radio" name="hours" value="hours-am">
     <input id="pm" class="hidden" type="radio" name="hours" value="hours-pm">
-    <input id="c-all" class="hidden" type="radio" name="category" value="category-all" checked="checked">
-    <input id="c-1" class="hidden" type="radio" name="category" value="category-first">
-    <input id="c-2" class="hidden" type="radio" name="category" value="category-second">
+    <input id="c-1" class="hidden" type="checkbox" name="category" value="category-1" checked="checked">
+    <input id="c-2" class="hidden" type="checkbox" name="category" value="category-2" checked="checked">
+    <input id="c-all" class="hidden" type="checkbox" name="category" value="category-all" checked="checked">
 
     <div class="manage-table">
         <div class="title"><h2>Manage Doctors Info</h2></div>
@@ -41,9 +41,9 @@
         </div>
         <div class="category">
             <label class="category-title">Category: </label>
-            <label class="category-all btn btn-large btn-success" for="c-all">All </label>
             <label class="first btn btn-large btn-success" for="c-1">1 </label>
             <label class="second btn btn-large btn-success" for="c-2">2 </label>
+            <label class="category-all btn btn-large btn-success" for="c-all">3 </label>
         </div>
     </div>
 
@@ -59,7 +59,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="work-days-weekdays hours-am category-first ">
+            <tr class="work-days-weekdays hours-am category-first">
                 <td>1.</td>
                 <td>Lorem Ipsum</td>
                 <td>Therapist</td>
@@ -67,11 +67,11 @@
                 <td>123</td>
                 <td>Mon, Tue, Fri 8am - 12pm</td>
             </tr>
-            <tr class="work-days-weekdays hours-pm category-first ">
+            <tr class="work-days-weekdays hours-pm category-all">
                 <td>2.</td>
                 <td>John Doe</td>
                 <td>Therapist</td>
-                <td>1</td>
+                <td>3</td>
                 <td>123</td>
                 <td>Mon, Tue, Fri 12pm - 4pm</td>
             </tr>
@@ -103,15 +103,15 @@
                 <td>6.</td>
                 <td>Johnathan Lorenz</td>
                 <td>Obstetrician</td>
-                <td >1</td>
+                <td>1</td>
                 <td>405</td>
                 <td>Mon - Fri 10am - 12pm</td>
             </tr>
-            <tr class="work-days-weekends hours-am category-second">
+            <tr class="work-days-weekends hours-am category-all">
                 <td>7.</td>
                 <td>Archibald De La Cruz</td>
                 <td>Obstetrician</td>
-                <td>2</td>
+                <td>3</td>
                 <td>405</td>
                 <td>Sat 10am - 12pm</td>
             </tr>
@@ -123,7 +123,7 @@
                 <td>103</td>
                 <td>Tue, Sat 10am - 12pm</td>
             </tr>
-            <tr class="category-first work-days-weekdays hours-am">
+            <tr class="work-days-weekdays hours-am category-first">
                 <td>9.</td>
                 <td>Geek Journal</td>
                 <td>Ophthalmologist</td>
@@ -131,7 +131,7 @@
                 <td>203</td>
                 <td>Mon - Fri 9am - 11am</td>
             </tr>
-            <tr class="category-second work-days-weekdays hours-pm">
+            <tr class="work-days-weekdays hours-pm category-second">
                 <td>10.</td>
                 <td>Fluffy Pinkleton</td>
                 <td>Ophthalmologist</td>
@@ -139,15 +139,15 @@
                 <td>202</td>
                 <td>Mon - Fri 12pm - 2pm</td>
             </tr>
-            <tr class="category-first work-days-weekdays work-days-weekends hours-am">
+            <tr class="work-days-weekdays work-days-weekends hours-am category-all">
                 <td>11.</td>
                 <td>Agent Seven</td>
                 <td>Otolaryngologist</td>
-                <td>1</td>
+                <td>3</td>
                 <td>200</td>
                 <td>Mon, Wed, Sat 9am - 11am</td>
             </tr>
-            <tr class="category-second work-days-weekdays hours-am">
+            <tr class="work-days-weekdays hours-am category-second">
                 <td>12.</td>
                 <td>Barry Glasgow</td>
                 <td>Otolaryngologist</td>
@@ -155,7 +155,7 @@
                 <td>201</td>
                 <td>Tue, Thu, Fri 2pm - 4pm</td>
             </tr>
-            <tr class="category-first work-days-weekdays hours-am hours-pm">
+            <tr class="work-days-weekdays hours-am hours-pm category-first">
                 <td>13.</td>
                 <td>Becoming Frustrated</td>
                 <td>Pediatrician</td>
@@ -164,7 +164,7 @@
                 <td>Mon, Wed, Fri 10am - 12pm<br>
                     Tue, Thu 12pm - 4pm</td>
             </tr>
-            <tr class="category-first work-days-weekdays hours-am hours-pm">
+            <tr class="work-days-weekdays hours-am hours-pm category-first">
                 <td>14.</td>
                 <td>Nadia Economist</td>
                 <td>Pulmonologist</td>
@@ -173,7 +173,7 @@
                 <td>Mon, Wed, Fri 10am - 12pm<br>
                     Tue, Thu 12pm - 4pm</td>
             </tr>
-            <tr class="category-first work-days-weekdays hours-am hours-pm">
+            <tr class="work-days-weekdays hours-am hours-pm category-first">
                 <td>15.</td>
                 <td>Bee Jeez</td>
                 <td>Urologist</td>

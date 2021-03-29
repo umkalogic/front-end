@@ -425,6 +425,8 @@ input#style-inverse:checked ~ .grid-container .controls {
     border-color: #f9f7f1;
 }
 input#style-inverse:checked ~ .grid-container .media {
+    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8) invert();
     mix-blend-mode: lighten;
 }
 
@@ -549,7 +551,12 @@ label[for]:hover .tooltiptext {
    Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    ========================================================================== */
-
+@media only screen and (min-width: 786px) {
+    [class^=article--] {
+        column-count: 2;
+        column-gap: 0.8em;
+    }
+}
 @media only screen and (min-width: 968px) {
     /* two-columns */
     .grid-container {
@@ -609,6 +616,19 @@ label[for]:hover .tooltiptext {
     }
     .media[alt=kafka] {
         display: none;
+    }
+    [class^=article--] {
+        column-count: 2;
+        column-gap: 1.5em;
+    }
+    .article--5 {
+        column-count: 2;
+        column-gap: 1.5em;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    [class^=article--] {
+        column-count: 2;
     }
 }
 
@@ -673,6 +693,13 @@ label[for]:hover .tooltiptext {
     .figure .media[alt=kafka] {
         display: block;
     }
+    [class^=article--] {
+        column-count: 1;
+    }
+    .article--5 {
+        column-count: 1;
+    }
+
 }
 
 @media print,
