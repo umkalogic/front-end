@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic'
-          rel='stylesheet' type='text/css'>
+    <link href='css/droid-serif.css' rel='stylesheet' type='text/css'>
+    <link href='css/playfair.css' rel='stylesheet' type='text/css'>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link href="css/normalize.css" rel="stylesheet">
@@ -15,12 +15,12 @@
     <title>Funny Newspaper</title>
 </head>
 <body>
-<input id="font-size-sm" type="radio" name="font-size" checked>
-<input id="font-size-lg" type="radio" name="font-size">
-<input id="font-sans-serif" type="radio" name="font">
-<input id="font-serif" type="radio" name="font" checked>
-<input id="style-standard" type="radio" name="style" checked>
-<input id="style-inverse" type="radio" name="style">
+<input id="font-size-sm" class="hidden" type="radio" name="font-size" checked>
+<input id="font-size-lg" class="hidden" type="radio" name="font-size">
+<input id="font-sans-serif" class="hidden" type="radio" name="font">
+<input id="font-serif" class="hidden" type="radio" name="font" checked>
+<input id="style-standard" class="hidden"  type="radio" name="style" checked>
+<input id="style-inverse" class="hidden" type="radio" name="style">
 
 <div class="grid-container">
     <div class="header">
@@ -54,9 +54,11 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dolorem eius facere
                     reprehenderit temporibus vel voluptatem.
                     A, ad aliquid assumenda blanditiis ducimus non nulla, officia ratione repellendus saepe sunt!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dolorem eius facere
-                    reprehenderit temporibus vel voluptatem.
-                    A, ad aliquid assumenda blanditiis ducimus non nulla, officia ratione repellendus saepe sunt!</p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                <figure class="figure">
+                    <img class="media" src="img/285217.jpg">
+                </figure>
             </div>
             <div class="free-space--1"></div>
         </div>
@@ -79,13 +81,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dolorem eius facere
                     reprehenderit temporibus vel voluptatem.
                     A, ad aliquid assumenda blanditiis ducimus non nulla, officia ratione repellendus saepe sunt!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dolorem eius facere
-                    reprehenderit temporibus vel voluptatem.
-                    A, ad aliquid assumenda blanditiis ducimus non nulla, officia ratione repellendus saepe sunt!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dolorem eius facere
-                    reprehenderit temporibus vel voluptatem.
-                    A, ad aliquid assumenda blanditiis ducimus non nulla, officia ratione repellendus saepe sunt!</p>
-            </div>
+                </div>
             <div class="free-space--2"></div>
         </div>
         <div class="column--3">
@@ -97,7 +93,7 @@
                     The little knot of people towards Chobham dispersed.
                     There was scarcely an intimation of movement from the pit.</p>
                 <figure class="figure">
-                    <img class="media" src="http://i.giphy.com/PW7MoTD2d9pJK.gif" alt="">
+                    <img class="media" src="img/PW7MoTD2d9pJK.gif" alt="">
                     <figcaption class="figcaption">Hermine hoping for courage.</figcaption>
                 </figure>
                 <p>It was this, as much as anything, that gave people courage, and I suppose the new arrivals from
@@ -121,7 +117,7 @@
                 <p>Partially, but it also obeys your commands. Hey, Luke! May the Force be with you.
                     I have traced the Rebel spies to her. Now she is my only link to finding their secret base.</p>
                 <figure class="figure">
-                    <img class="media" src="http://i.giphy.com/4fDWVPMoSyhgc.gif" alt="">
+                    <img class="media" src="img/4fDWVPMoSyhgc.gif" alt="">
                     <figcaption class="figcaption">"This time, let go your conscious self and act on instinct."</figcaption>
                 </figure>
                 <p>Leave that to me. Send a distress signal, and inform the Senate that all on board were killed.
@@ -150,8 +146,11 @@
                     housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat
                     upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
                     Gregor then turned to look out the window at the dull weather. </p>
+                <figure class="figure">
+                    <img class="media" src="img/41Dpa37iaVL.jpg" alt="">
+                </figure>
             </div>
-            <div class="article-freespace--5"></div>
+            <div class="free-space--5"></div>
         </div>
     </div>
 </div>
