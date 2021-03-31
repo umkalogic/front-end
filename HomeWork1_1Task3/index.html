@@ -12,68 +12,46 @@
     <title>Not so funny cooking recipe book</title>
 </head>
 <body>
-    <div class="container">
-        <section class="carousel" aria-label="Gallery">
-            <ol class="carousel__viewport">
-                <li id="carousel__slide1"
-                    tabindex="0"
-                    class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <a href="#carousel__slide4"
-                           class="carousel__prev">Go to last slide</a>
-                        <a href="#carousel__slide2"
-                           class="carousel__next">Go to next slide</a>
-                    </div>
-                </li>
-                <li id="carousel__slide2"
-                    tabindex="0"
-                    class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                    <a href="#carousel__slide1"
-                       class="carousel__prev">Go to previous slide</a>
-                    <a href="#carousel__slide3"
-                       class="carousel__next">Go to next slide</a>
-                </li>
-                <li id="carousel__slide3"
-                    tabindex="0"
-                    class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                    <a href="#carousel__slide2"
-                       class="carousel__prev">Go to previous slide</a>
-                    <a href="#carousel__slide4"
-                       class="carousel__next">Go to next slide</a>
-                </li>
-                <li id="carousel__slide4"
-                    tabindex="0"
-                    class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                    <a href="#carousel__slide3"
-                       class="carousel__prev">Go to previous slide</a>
-                    <a href="#carousel__slide1"
-                       class="carousel__next">Go to first slide</a>
-                </li>
-            </ol>
-            <aside class="carousel__navigation">
-                <ol class="carousel__navigation-list">
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide1"
-                           class="carousel__navigation-button">Go to slide 1</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide2"
-                           class="carousel__navigation-button">Go to slide 2</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide3"
-                           class="carousel__navigation-button">Go to slide 3</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide4"
-                           class="carousel__navigation-button">Go to slide 4</a>
-                    </li>
-                </ol>
-            </aside>
-        </section>
+<div class="carousel">
+
+    <s id="s1"></s>
+    <s id="s2"></s>
+    <s id="s3"></s>
+
+    <div class="slider">
+        <div>
+            <img src="img/Screenshot_2021-03-31 Blackberry Mascarpone Tart with Thyme Shortbread Crust.png" alt=""><img
+                src="img/Screenshot_2021-03-31 French Spring Soup.png" alt=""><img
+                src="img/Screenshot_2021-03-31 Homemade Miso Soup.png" alt=""><img
+                src="img/Screenshot_2021-03-31 Coconut-Caramel Shrimp.png" alt="">
+        </div>
+        <div style="background:#85b;">
+            <img src="img/Screenshot_2021-03-31%20Shrimp%20and%20Broccoli.png" alt=""><img
+                src="img/Screenshot_2021-03-31%20Jambalaya(2).png" alt=""><img
+                src="img/Screenshot_2021-03-31%20Panang%20Curry%20with%20Chicken.png" alt=""><img
+                src="img/Screenshot_2021-03-31%20Portuguese%20Custard%20Tarts%20-%20Pasteis%20de%20Nata.png" alt="">
+        </div>
+        <div style="background:#e95;">
+            <img src="img/Screenshot_2021-03-31%20Slow%20Cooker%20Spanish%20Beef%20Stew(1).png" alt=""><img
+                src="img/Screenshot_2021-03-31%20Spicy%20Potato%20Soup%20II.png" alt=""><img
+                src="img/Screenshot_2021-03-31%20Stir%20Fried%20Sesame%20Vegetables%20with%20Rice.png" alt=""><img
+                src="img/Screenshot_2021-03-31%2015%20of%20the%20Worlds%20Best%20Savory%20Beef%20Stew%20Recipes.png" alt="">
+        </div>
+
     </div>
+
+    <div class="prev-next">
+        <div><a href="#s3"></a><a href="#s2"></a></div>
+        <div><a href="#s1"></a><a href="#s3"></a></div>
+        <div><a href="#s2"></a><a href="#s1"></a></div>
+        <div><a href="#s3"></a><a href="#s1"></a></div>
+    </div>
+
+    <div class="bullets">
+        <a href="#s1">1</a>
+        <a href="#s2">2</a>
+        <a href="#s3">3</a>
+    </div>
+</div>
 </body>
 </html>
