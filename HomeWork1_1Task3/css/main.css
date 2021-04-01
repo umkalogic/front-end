@@ -125,13 +125,25 @@ video {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 229px;
+    width: 229px;
     min-height: 229px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     padding: 12px 16px;
+    margin-top: -1px;
     z-index: 2;
 }
-[class^=img]:hover + .dropdown-content {
+.dropdown-content p {
+    word-wrap: break-word;
+}
+.dropdown-content p a {
+    color: #000080;
+    text-decoration: underline dashed #000080;
+}
+.dropdown-content p a:hover {
+    color: #27831d;
+}
+[class^=img]:hover + .dropdown-content,
+.dropdown-content:hover {
     display: block;
     z-index: 3;
 }
@@ -146,7 +158,6 @@ video {
 .carousel .prev-next > div+div {
     visibility: hidden;
 }
-
 .carousel .prev-next a {
     background: #fff;
     position: absolute;
