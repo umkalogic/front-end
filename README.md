@@ -10,5 +10,3 @@ Funny Newspaper
 
 ###Task 3
 Not So Funny Slider
-
-[]: https://umkalogic.github.io/front-end/home/index.html
