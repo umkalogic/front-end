@@ -1,5 +1,5 @@
 # Front-end tasks
-Go to [https://umkalogic.github.io/front-end/home/index.html][all tasks]
+Go to [https://umkalogic.github.io/front-end/home/index.html]
 
 
 ## Homework 1.1 
