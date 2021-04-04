@@ -1,5 +1,5 @@
 # Front-end tasks
-Go to <a href=[https://umkalogic.github.io/front-end/home/index.html]>[all tasks]</a>
+Go to [https://umkalogic.github.io/front-end/home/index.html][all tasks]
 
 
 ## Homework 1.1 
