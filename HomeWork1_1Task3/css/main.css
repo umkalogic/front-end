@@ -59,16 +59,6 @@ video {
     /*opacity: 1;*/
     visibility: visible;
 }
-#s1:target ~ .item--2,
-#s1:target ~ .item--3,
-#s2:target ~ .item--1,
-#s2:target ~ .item--3,
-#s3:target ~ .item--1,
-#s3:target ~ .item--2 {
-    z-index: 1;
-    /*opacity: 0;*/
-    visibility: hidden;
-}
 .carousel-pic {
     display: inline-block;
     margin-right: -3px;
@@ -145,7 +135,7 @@ video {
 .dropdown-content p a:hover {
     color: #27831d;
 }
-a[href^="#img"]:hover + .dropdown-content,
+label[for^="img"]:hover + .dropdown-content,
 .dropdown-content:hover {
     display: block;
     z-index: 3;
@@ -244,37 +234,44 @@ a[href^="#img"]:hover + .dropdown-content,
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
 }
-#img1:checked ~ .item--1 .carousel-pic .modal.img--1 {
+[id^=img]:not(:checked) ~ [class="item--"] .carousel-pic [class^="img--"] {
+    display: none;
+    z-index: -1;
+}
+#img1:checked ~ .item--1 .carousel-pic .img--1,
+#img2:checked ~ .item--1 .carousel-pic .img--2,
+#img3:checked ~ .item--1 .carousel-pic .img--3,
+#img4:checked ~ .item--1 .carousel-pic .img--4,
+#img5:checked ~ .item--2 .carousel-pic .img--5,
+#img6:checked ~ .item--2 .carousel-pic .img--6,
+#img7:checked ~ .item--2 .carousel-pic .img--7,
+#img8:checked ~ .item--2 .carousel-pic .img--8,
+#img9:checked ~ .item--3 .carousel-pic .img--9,
+#img10:checked ~ .item--3 .carousel-pic .img--10,
+#img11:checked ~ .item--3 .carousel-pic .img--11,
+#img12:checked ~ .item--3 .carousel-pic .img--12 {
     display: block;
     z-index: 100;
 }
-/*#img1:target ~ .item--1 .carousel-pic .modal.img--1,*/
-/*#img2:target ~ .item--1 .carousel-pic .modal.img--2,*/
-/*#img3:target ~ .item--1 .carousel-pic .modal.img--3,*/
-/*#img4:target ~ .item--1 .carousel-pic .modal.img--4,*/
-/*#img5:target ~ .item--2 .carousel-pic .modal.img--5 {*/
-/*    display: block;*/
-/*    z-index: 100;*/
-/*}*/
-/*#img1:target ~ .bullets, #img1:target ~ .prev-next,*/
-/*#img2:target ~ .bullets, #img2:target ~ .prev-next,*/
-/*#img3:target ~ .bullets, #img3:target ~ .prev-next,*/
-/*#img4:target ~ .bullets, #img4:target ~ .prev-next,*/
-/*#img5:target ~ .bullets, #img5:target ~ .prev-next {*/
-/*    z-index: 1;*/
-/*}*/
-#close1:target ~ .item--1 .carousel-pic .modal.img--1,
-#close2:target ~ .item--1 .carousel-pic .modal.img--2,
-#close3:target ~ .item--1 .carousel-pic .modal.img--3,
-#close4:target ~ .item--1 .carousel-pic .modal.img--4,
-#close5:target ~ .item--2 .carousel-pic .modal.img--5 {
+#img1:checked ~ .prev-next, #img1:checked ~ .bullets,
+#img2:checked ~ .prev-next, #img2:checked ~ .bullets,
+#img3:checked ~ .prev-next, #img3:checked ~ .bullets,
+#img4:checked ~ .prev-next, #img4:checked ~ .bullets,
+#img5:checked ~ .prev-next, #img5:checked ~ .bullets,
+#img6:checked ~ .prev-next, #img6:checked ~ .bullets,
+#img7:checked ~ .prev-next, #img7:checked ~ .bullets,
+#img8:checked ~ .prev-next, #img8:checked ~ .bullets,
+#img9:checked ~ .prev-next, #img9:checked ~ .bullets,
+#img10:checked ~ .prev-next, #img10:checked ~ .bullets,
+#img11:checked ~ .prev-next, #img11:checked ~ .bullets,
+#img12:checked ~ .prev-next, #img12:checked ~ .bullets {
+    z-index: 1;
+}
+[id^=close]:checked ~ [class^="item--"] .carousel-pic .modal {
+    display: none;
     z-index: -1;
 }
-#close1:target ~ .bullets, #close1:target ~ .prev-next,
-#close2:target ~ .bullets, #close2:target ~ .prev-next,
-#close3:target ~ .bullets, #close3:target ~ .prev-next,
-#close4:target ~ .bullets, #close4:target ~ .prev-next,
-#close5:target ~ .bullets, #close5:target ~ .prev-next {
+[id^=close]:checked ~ .bullets, [id^=close]:checked ~ .prev-next {
     z-index: 2;
 }
 /* Modal Content (image) */
