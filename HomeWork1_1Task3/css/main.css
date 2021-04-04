@@ -253,18 +253,7 @@ label[for^="img"]:hover + .dropdown-content,
     display: block;
     z-index: 100;
 }
-#img1:checked ~ .prev-next, #img1:checked ~ .bullets,
-#img2:checked ~ .prev-next, #img2:checked ~ .bullets,
-#img3:checked ~ .prev-next, #img3:checked ~ .bullets,
-#img4:checked ~ .prev-next, #img4:checked ~ .bullets,
-#img5:checked ~ .prev-next, #img5:checked ~ .bullets,
-#img6:checked ~ .prev-next, #img6:checked ~ .bullets,
-#img7:checked ~ .prev-next, #img7:checked ~ .bullets,
-#img8:checked ~ .prev-next, #img8:checked ~ .bullets,
-#img9:checked ~ .prev-next, #img9:checked ~ .bullets,
-#img10:checked ~ .prev-next, #img10:checked ~ .bullets,
-#img11:checked ~ .prev-next, #img11:checked ~ .bullets,
-#img12:checked ~ .prev-next, #img12:checked ~ .bullets {
+[id^=img]:checked ~ .prev-next, [id^=img]:checked ~ .bullets {
     z-index: 1;
 }
 [id^=close]:checked ~ [class^="item--"] .carousel-pic .modal {
