@@ -69,9 +69,6 @@ video {
     /*opacity: 0;*/
     visibility: hidden;
 }
-#img5:target ~ .carousel-item.item--2 .carousel-pic .modal.img--5 {
-    display: block;
-}
 .carousel-pic {
     display: inline-block;
     margin-right: -3px;
@@ -247,27 +244,30 @@ a[href^="#img"]:hover + .dropdown-content,
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
 }
-#img1:target ~ .item--1 .carousel-pic .modal.img--1,
-#img2:target ~ .item--1 .carousel-pic .modal.img--2,
-#img3:target ~ .item--1 .carousel-pic .modal.img--3,
-#img4:target ~ .item--1 .carousel-pic .modal.img--4,
-#img5:target ~ .item--2 .carousel-pic .modal.img--5 {
+#img1:checked ~ .item--1 .carousel-pic .modal.img--1 {
     display: block;
     z-index: 100;
 }
-#img1:target ~ .bullets, #img1:target ~ .prev-next,
-#img2:target ~ .bullets, #img2:target ~ .prev-next,
-#img3:target ~ .bullets, #img3:target ~ .prev-next,
-#img4:target ~ .bullets, #img4:target ~ .prev-next,
-#img5:target ~ .bullets, #img5:target ~ .prev-next {
-    z-index: 1;
-}
+/*#img1:target ~ .item--1 .carousel-pic .modal.img--1,*/
+/*#img2:target ~ .item--1 .carousel-pic .modal.img--2,*/
+/*#img3:target ~ .item--1 .carousel-pic .modal.img--3,*/
+/*#img4:target ~ .item--1 .carousel-pic .modal.img--4,*/
+/*#img5:target ~ .item--2 .carousel-pic .modal.img--5 {*/
+/*    display: block;*/
+/*    z-index: 100;*/
+/*}*/
+/*#img1:target ~ .bullets, #img1:target ~ .prev-next,*/
+/*#img2:target ~ .bullets, #img2:target ~ .prev-next,*/
+/*#img3:target ~ .bullets, #img3:target ~ .prev-next,*/
+/*#img4:target ~ .bullets, #img4:target ~ .prev-next,*/
+/*#img5:target ~ .bullets, #img5:target ~ .prev-next {*/
+/*    z-index: 1;*/
+/*}*/
 #close1:target ~ .item--1 .carousel-pic .modal.img--1,
 #close2:target ~ .item--1 .carousel-pic .modal.img--2,
 #close3:target ~ .item--1 .carousel-pic .modal.img--3,
 #close4:target ~ .item--1 .carousel-pic .modal.img--4,
 #close5:target ~ .item--2 .carousel-pic .modal.img--5 {
-    display: none;
     z-index: -1;
 }
 #close1:target ~ .bullets, #close1:target ~ .prev-next,
