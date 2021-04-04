@@ -47,7 +47,8 @@ video {
     top: 0;
     width: 916px;
     height: 229px;
-    opacity: 0;
+    /*opacity: 0;*/
+    visibility: hidden;
     transition: 0.8s;
 }
 .item--1,
@@ -55,7 +56,8 @@ video {
 #s2:target ~ .item--2,
 #s3:target ~ .item--3 {
     z-index: 2;
-    opacity: 1;
+    /*opacity: 1;*/
+    visibility: visible;
 }
 #s1:target ~ .item--2,
 #s1:target ~ .item--3,
@@ -64,7 +66,11 @@ video {
 #s3:target ~ .item--1,
 #s3:target ~ .item--2 {
     z-index: 1;
-    opacity: 0;
+    /*opacity: 0;*/
+    visibility: hidden;
+}
+#img5:target ~ .carousel-item.item--2 .carousel-pic .modal.img--5 {
+    display: block;
 }
 .carousel-pic {
     display: inline-block;
@@ -142,7 +148,7 @@ video {
 .dropdown-content p a:hover {
     color: #27831d;
 }
-[class^=img]:hover + .dropdown-content,
+a[href^="#img"]:hover + .dropdown-content,
 .dropdown-content:hover {
     display: block;
     z-index: 3;
@@ -207,26 +213,117 @@ video {
     background: rgba(255, 225, 225, 0.7) !important;
 }
 /* NAVIGATION BUTTONS */
-.carousel > span:target ~ .bullets > * { background: rgba(255, 225, 225, 0.5);}
+[id^=s]:target ~ .bullets > * { background: rgba(255, 225, 225, 0.5);}
 /* ACTIVE */
 #s1:target ~ .bullets > *:nth-child(1) {background: rgba(255, 225, 225, 1);}
 #s2:target ~ .bullets > *:nth-child(2) {background: rgba(255, 225, 225, 1);}
 #s3:target ~ .bullets > *:nth-child(3) {background: rgba(255, 225, 225, 1);}
 
 /* PREV/NEXT CONTAINERS VISIBILITY */
-.carousel > span:target ~ .prev-next > * { visibility: hidden; }
+[id^=s]:target ~ .prev-next > * { visibility: hidden; }
 /* ACTIVE: */
-#s1:target ~ .prev-next >*:nth-child(1) {visibility: visible;}
-#s2:target ~ .prev-next >*:nth-child(2) {visibility: visible;}
-#s3:target ~ .prev-next >*:nth-child(3) {visibility: visible;}
+#s1:target ~ .prev-next > *:nth-child(1) {visibility: visible;}
+#s2:target ~ .prev-next > *:nth-child(2) {visibility: visible;}
+#s3:target ~ .prev-next > *:nth-child(3) {visibility: visible;}
 
-.carousel a {
+.carousel .bullets a,
+.carousel .prev-next a {
     border-radius: 50%;
     margin: 0 3px;
     color: rgba(0,0,0,0.8);
     text-decoration: none;
 }
-
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+#img1:target ~ .item--1 .carousel-pic .modal.img--1,
+#img2:target ~ .item--1 .carousel-pic .modal.img--2,
+#img3:target ~ .item--1 .carousel-pic .modal.img--3,
+#img4:target ~ .item--1 .carousel-pic .modal.img--4,
+#img5:target ~ .item--2 .carousel-pic .modal.img--5 {
+    display: block;
+    z-index: 100;
+}
+#img1:target ~ .bullets, #img1:target ~ .prev-next,
+#img2:target ~ .bullets, #img2:target ~ .prev-next,
+#img3:target ~ .bullets, #img3:target ~ .prev-next,
+#img4:target ~ .bullets, #img4:target ~ .prev-next,
+#img5:target ~ .bullets, #img5:target ~ .prev-next {
+    z-index: 1;
+}
+#close1:target ~ .item--1 .carousel-pic .modal.img--1,
+#close2:target ~ .item--1 .carousel-pic .modal.img--2,
+#close3:target ~ .item--1 .carousel-pic .modal.img--3,
+#close4:target ~ .item--1 .carousel-pic .modal.img--4,
+#close5:target ~ .item--2 .carousel-pic .modal.img--5 {
+    display: none;
+    z-index: -1;
+}
+#close1:target ~ .bullets, #close1:target ~ .prev-next,
+#close2:target ~ .bullets, #close2:target ~ .prev-next,
+#close3:target ~ .bullets, #close3:target ~ .prev-next,
+#close4:target ~ .bullets, #close4:target ~ .prev-next,
+#close5:target ~ .bullets, #close5:target ~ .prev-next {
+    z-index: 2;
+}
+/* Modal Content (image) */
+.modal-content {
+    margin: -50px auto 20px auto;
+    display: block;
+    width: 75rem;
+    max-width: 700px;
+    min-height: 700px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.img1.modal-content, .img2.modal-content, .img3.modal-content, .img4.modal-content,
+.img5.modal-content, .img6.modal-content, .img7.modal-content, .img8.modal-content,
+.img9.modal-content, .img10.modal-content, .img11.modal-content, .img12.modal-content {
+    background-size: cover;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
